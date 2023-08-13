@@ -1,0 +1,19 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Clonar Repositorio') {
+            steps {
+                // Clonar el repositorio desde GitHub
+                git 'https://github.com/tu-usuario/tu-repositorio.git'
+            }
+        }
+
+        stage('Ejecutar Registro') {
+            steps {
+                // Ejecutar el archivo registro.py
+                sh 'python registro.py'
+            }
+        }
+    }
+}
