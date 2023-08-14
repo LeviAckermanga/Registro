@@ -2,6 +2,13 @@ pipeline {
     agent any
 
     stages {
+        stage('Clonar Repositorio') {
+            steps {
+                // Clonar el repositorio desde GitHub
+                git 'https://github.com/LeviAckermanga/registro.git'
+            }
+        }
+
         stage('Ejecutar Registro') {
             steps {
                 // Ejecutar el archivo registro.py
