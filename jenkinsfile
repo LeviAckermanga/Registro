@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage('Clonar Repositorio') {
             steps {
-                git clone 'https://github.com/LeviAckermanga/registro.git'
+                git 'https://github.com/LeviAckermanga/registro.git'
             }
         }
 
